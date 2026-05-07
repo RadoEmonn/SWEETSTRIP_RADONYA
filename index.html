@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweetstrip_Radomm | Aesthetic Photostrip Custom</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Sweetstrip<span>_Radomm</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#produk">Produk</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#cara-order">Cara Order</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+            <div class="nav-icons">
+                <div class="cart-btn" onclick="toggleCart()">
+                    <i data-lucide="shopping-bag"></i>
+                    <span class="cart-badge">0</span>
+                </div>
+                <button class="btn-primary-sm">Pesan Sekarang</button>
+                <div class="menu-toggle">
+                    <i data-lucide="menu"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content fade-in">
+                <span class="badge">Aesthetic & Premium</span>
+                <h1>Abadikan Momen Manismu Dalam Bentuk <span>Photostrip</span></h1>
+                <p>Ubah kenangan digitalmu menjadi cetakan fisik berkualitas tinggi dengan sentuhan desain Korea yang elegan dan lucu.</p>
+                <div class="hero-btns">
+                    <a href="#produk" class="btn-primary">Lihat Produk</a>
+                    <a href="#cara-order" class="btn-secondary">Cara Order</a>
+                </div>
+                <div class="promo-tag">
+                    <i data-lucide="sparkles"></i> Semua Produk Hanya <strong>Rp17.000</strong>
+                </div>
+            </div>
+            <div class="hero-image floating">
+                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=800" alt="Photostrip Showcase">
+            </div>
+        </section>
+
+        <section id="produk" class="products-section">
+            <div class="section-title fade-in">
+                <h2>Koleksi Desain Kami</h2>
+                <div class="filter-container">
+                    <button class="filter-btn active" data-filter="all">Semua</button>
+                    <button class="filter-btn" data-filter="kediri">Budaya Kediri</button>
+                    <button class="filter-btn" data-filter="lucu">Motif Lucu</button>
+                    <button class="filter-btn" data-filter="history">Berhistory</button>
+                </div>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card" data-category="kediri">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1520390138845-fd2d229dd553?auto=format&fit=crop&q=80&w=500" alt="Kediri Heritage">
+                        <span class="tag-best">Best Seller</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Kediri Heritage Series</h3>
+                        <div class="rating"><i data-lucide="star"></i> 5.0 (120+)</div>
+                        <p class="price">Rp17.000</p>
+                        <button class="add-to-cart" onclick="addToCart('Kediri Heritage', 17000)">Tambah Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="lucu">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&q=80&w=500" alt="Cute Pastel">
+                    </div>
+                    <div class="product-info">
+                        <h3>Pastel Candy Pop</h3>
+                        <div class="rating"><i data-lucide="star"></i> 4.9 (85)</div>
+                        <p class="price">Rp17.000</p>
+                        <button class="add-to-cart" onclick="addToCart('Pastel Candy Pop', 17000)">Tambah Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="history">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1533154683836-84ea7a0bc310?auto=format&fit=crop&q=80&w=500" alt="Vintage Memory">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vintage Memory Lane</h3>
+                        <div class="rating"><i data-lucide="star"></i> 4.8 (92)</div>
+                        <p class="price">Rp17.000</p>
+                        <button class="add-to-cart" onclick="addToCart('Vintage Memory Lane', 17000)">Tambah Keranjang</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cara-order" class="order-section">
+            <div class="section-title">
+                <h2>Cara Pemesanan</h2>
+            </div>
+            <div class="order-steps">
+                <div class="step">
+                    <div class="step-icon"><i data-lucide="mouse-pointer-click"></i></div>
+                    <h4>Pilih Desain</h4>
+                    <p>Pilih desain photostrip favoritmu dari katalog kami.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon"><i data-lucide="upload"></i></div>
+                    <h4>Upload Foto</h4>
+                    <p>Kirimkan foto terbaikmu melalui WhatsApp atau Email.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon"><i data-lucide="credit-card"></i></div>
+                    <h4>Pembayaran</h4>
+                    <p>Lakukan pembayaran mudah via E-Wallet atau Transfer.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon"><i data-lucide="truck"></i></div>
+                    <h4>Duduk Manis</h4>
+                    <p>Pesanan diproses dan dikirim langsung ke rumahmu!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Keranjang Saya</h3>
+            <button onclick="toggleCart()"><i data-lucide="x"></i></button>
+        </div>
+        <div id="cart-items">
+            <p class="empty-msg">Keranjang masih kosong nih..</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total-box">
+                <span>Total:</span>
+                <span id="cart-total">Rp0</span>
+            </div>
+            <button class="btn-checkout" onclick="checkoutWhatsApp()">Checkout Sekarang (WA)</button>
+        </div>
+    </div>
+
+    <a href="https://wa.me/your-number" class="floating-wa">
+        <i data-lucide="message-circle"></i>
+    </a>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="logo">Sweetstrip<span>_Radomm</span></div>
+                <p>Toko photostrip online aesthetic dengan kualitas premium dan harga terjangkau. Bikin kenanganmu makin berwarna!</p>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i data-lucide="instagram"></i></a>
+                <a href="#"><i data-lucide="twitter"></i></a>
+                <a href="#"><i data-lucide="message-circle"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Sweetstrip_Radomm. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
